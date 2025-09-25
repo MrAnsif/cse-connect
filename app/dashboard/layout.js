@@ -14,12 +14,10 @@ export default function DashboardLayout({ children }) {
       { label: "Alumni Community", href: "/dashboard/alumni" },
       { label: "Resume Samples", href: "/dashboard/resume-samples" },
       { label: "Request Letter Format", href: "/dashboard/request-letter" },
-      { label: "Support", href: "/dashboard/support" },
     ],
     teacher: [
       { label: "Student List", href: "/dashboard/student-list" },
       { label: "Markup Report", href: "/dashboard/markup-report" },
-      { label: "Support", href: "/dashboard/support" },
     ],
   };
 

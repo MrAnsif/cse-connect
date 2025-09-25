@@ -10,7 +10,7 @@ export default function UserRoleProvider({ children }) {
 
   useEffect(() => {
     if (isLoaded && user) {
-      const role = user.publicMetadata?.role || "student";
+      const role = user.publicMetadata?.role;
       setRole(role);
     }
   }, [isLoaded, user, setRole]);
