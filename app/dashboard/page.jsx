@@ -1,12 +1,14 @@
 'use client'
-import { useUser } from '@clerk/nextjs'
 import React from 'react'
-import StudentDashboard from '../components/dashboard/StudentDashboard'
-import TeacherDashboard from '../components/dashboard/TeacherDashboard'
+import StudentDashboard from './components/StudentDashboard'
+import TeacherDashboard from './components/TeacherDashboard'
+import { useUserStore } from '@/lib/store/useUserStore'
 
 const page = () => {
-    const { user } = useUser()
-    const role = user?.publicMetadata?.role
+    const role = useUserStore((state) => state.role)
+
+    if (!role) return <p>Loading...</p>
+
     return (
         <div>
             {role === 'student' && <StudentDashboard />}
